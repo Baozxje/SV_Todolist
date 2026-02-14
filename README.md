@@ -1,102 +1,85 @@
-🚀 Nền Tảng Quản Lý Công Việc Cá Nhân / Nhóm
-📌 Giới thiệu
+# 🚀 NỀN TẢNG QUẢN LÝ CÔNG VIỆC CÁ NHÂN / NHÓM
 
-Nền tảng Quản lý Công việc Cá nhân/Nhóm là hệ thống backend được xây dựng nhằm hỗ trợ người dùng quản lý công việc hiệu quả, theo dõi tiến độ và cộng tác nhóm.
+## 📌 Giới thiệu
 
-Dự án được phát triển bằng:
+Hệ thống backend hỗ trợ quản lý công việc cá nhân và nhóm, giúp theo dõi tiến độ, phân công nhiệm vụ và cộng tác hiệu quả.
 
-☕ Java
+---
 
-🌱 Spring Boot
+## 🛠 Công nghệ sử dụng
 
-🛢 SQL (MySQL)
+- Java
+- Spring Boot
+- Spring Security + JWT
+- Spring Data JPA
+- MySQL
+- Docker
+- Maven
 
-🔐 Spring Security + JWT
+---
 
-🐳 Docker
+## 🧱 Kiến trúc hệ thống
 
-💻 IntelliJ IDEA Community Edition
-
-
-🧱 Kiến trúc hệ thống
-
-Hệ thống được xây dựng theo mô hình:
-
+```
 Controller → Service → Repository → Database
+```
+
+Cấu trúc thư mục:
+
+```
+com.taskmanager
+ ├── config
+ ├── controller
+ ├── service
+ ├── repository
+ ├── entity
+ ├── dto
+ ├── security
+ ├── exception
+```
+
+---
+
+## 👤 Chức năng chính
+
+### 🔐 Quản lý người dùng
+- Đăng ký
+- Đăng nhập (JWT)
+- Phân quyền (USER / ADMIN)
+
+### 📋 Quản lý công việc cá nhân
+- Tạo task
+- Cập nhật task
+- Xoá task
+- Đánh dấu hoàn thành
+- Lọc theo trạng thái, deadline, độ ưu tiên
+
+### 👥 Quản lý nhóm
+- Tạo nhóm
+- Thêm thành viên
+- Phân công công việc
+- Theo dõi tiến độ nhóm
+
+---
 
 
-👤 Chức năng chính
-🔐 Quản lý người dùng
+### Clone project
 
-Đăng ký tài khoản
+```
+git clone https://github.com/Baozxje/SV_Todolist.git
+```
 
-Đăng nhập (JWT Authentication)
 
-Mã hóa mật khẩu (BCrypt)
+### Chạy project
 
-Phân quyền (USER / ADMIN)
+```
+mvn spring-boot:run
+```
 
-📋 Quản lý công việc cá nhân
 
-Tạo công việc
+---
 
-Cập nhật công việc
+## 👨‍💻 Tác giả
 
-Xoá công việc
-
-Đánh dấu hoàn thành
-
-Lọc theo:
-
-Trạng thái (TODO / IN_PROGRESS / DONE)
-
-Độ ưu tiên (LOW / MEDIUM / HIGH)
-
-Deadline
-
-👥 Quản lý nhóm
-
-Tạo nhóm
-
-Thêm thành viên
-
-Phân công công việc
-
-Theo dõi tiến độ nhóm
-
-Thống kê % hoàn thành
-
-🐳 Chạy bằng Docker
-Build image
-docker build -t task-manager .
-
-Run container
-docker run -p 8080:8080 task-manager
-
-🔐 API Authentication
-
-Sau khi đăng nhập thành công, hệ thống sẽ trả về JWT Token.
-
-Sử dụng token trong header:
-
-Authorization: Bearer <your_token>
-
-📈 Hướng phát triển tương lai
-
-Comment trong task
-
-Subtask
-
-File attachment
-
-Notification
-
-WebSocket realtime
-
-Swagger API Documentation
-
-Unit Test (JUnit + Mockito)
-
-CI/CD Pipeline
-
-Công nghệ: Java, Spring Boot, Docker, SQL
+Lam Gia Bao  
+Backend Developer – Java & Spring Boot
